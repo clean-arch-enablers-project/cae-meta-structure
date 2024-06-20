@@ -1,0 +1,19 @@
+{
+  "organization": "com.cae",
+  "domain": "cae-meta-structure",
+  "monolayer": true,
+  "useCasePaths": [
+    {
+      "layer": "core",
+      "location": "src/main/java/com/cae/meta_structure/core/use_cases"
+    },
+    {
+      "layer": "adapters",
+      "location": "src/main/java/com/cae/meta_structure/adapters/use_cases"
+    },
+    {
+      "layer": "assemblers",
+      "location": "src/main/java/com/cae/meta_structure/assemblers/use_cases"
+    }
+  ]
+}
