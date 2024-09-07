@@ -11,25 +11,28 @@ import java.util.List;
 public class IOFolderMetaStructure extends FolderMetaStructure {
 
     private final UseCaseTypes useCaseType;
+    private final boolean kotlin;
 
     public IOFolderMetaStructure(
             FolderMetaStructure basicUseCaseStructure,
-            UseCaseTypes useCaseType) {
+            UseCaseTypes useCaseType,
+            Boolean kotlin) {
         super(
                 basicUseCaseStructure,
                 "io",
                 TextCase.SNAKE
         );
         this.useCaseType = useCaseType;
+        this.kotlin = kotlin;
     }
 
     @Override
     protected List<FolderMetaStructure> defineNeededFolders() {
         var folders = new ArrayList<FolderMetaStructure>();
         if (Boolean.TRUE.equals(this.useCaseType.getHasInput()))
-            folders.add(new InputsFolderMetaStructure(this, this.parent.getName()));
+            folders.add(new InputsFolderMetaStructure(this, this.parent.getName(), this.kotlin));
         if (Boolean.TRUE.equals(this.useCaseType.getHasOutput()))
-            folders.add(new OutputsFolderMetaStructure(this, this.parent.getName()));
+            folders.add(new OutputsFolderMetaStructure(this, this.parent.getName(), this.kotlin));
         return folders;
     }
 

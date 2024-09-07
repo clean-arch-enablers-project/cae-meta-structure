@@ -6,7 +6,7 @@ import com.cae.meta_structure.core.entities.enums.TextCase;
 import com.cae.meta_structure.core.entities.providers.JavaWorldInfoProvider;
 import com.cae.meta_structure.core.entities.implementations.structures.project_structures.multilayer_structure.components.MultilayerAdaptersProject;
 import com.cae.meta_structure.core.entities.implementations.structures.project_structures.multilayer_structure.components.MultilayerAssemblersProject;
-import com.cae.meta_structure.core.entities.implementations.structures.project_structures.multilayer_structure.components.MultilayerCaeSettingsFileMetaStructure;
+import com.cae.meta_structure.core.entities.implementations.structures.project_structures.multilayer_structure.components.JavaMultilayerCaeSettingsFileMetaStructure;
 import com.cae.meta_structure.core.entities.implementations.structures.project_structures.multilayer_structure.components.MultilayerCoreProject;
 
 import java.util.List;
@@ -37,6 +37,6 @@ public class MultilayerJavaProject extends FolderMetaStructure {
 
     @Override
     protected List<FileMetaStructure> defineNeededFiles() {
-        return List.of(new MultilayerCaeSettingsFileMetaStructure(this));
+        return List.of(new JavaMultilayerCaeSettingsFileMetaStructure(this));
     }
 }

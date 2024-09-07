@@ -8,12 +8,15 @@ import java.util.List;
 
 public class MonolayerAssemblersLoggerFolderMetaStructure extends FolderMetaStructure {
 
-    public MonolayerAssemblersLoggerFolderMetaStructure(FolderMetaStructure parent) {
+    private final boolean kotlin;
+
+    public MonolayerAssemblersLoggerFolderMetaStructure(FolderMetaStructure parent, Boolean kotlin) {
         super(
                 parent,
                 "logger",
                 TextCase.SNAKE
         );
+        this.kotlin = kotlin;
     }
 
     @Override
@@ -23,8 +26,9 @@ public class MonolayerAssemblersLoggerFolderMetaStructure extends FolderMetaStru
 
     @Override
     protected List<FileMetaStructure> defineNeededFiles() {
-        return List.of(
-                new MonolayerLoggerBootstrapFileMetaStructure(this)
+        return List.of(this.kotlin?
+                new KotlinLoggerBootstrapFileMetaStructure(this) :
+                new JavaLoggerBootstrapFileMetaStructure(this)
         );
     }
 }

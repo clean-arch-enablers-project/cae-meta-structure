@@ -7,12 +7,13 @@ import com.cae.meta_structure.core.entities.implementations.structures.use_case_
 
 public class CucAtAssemblersLayer extends BasicUseCaseStructure {
 
-    public CucAtAssemblersLayer(String name) {
+    public CucAtAssemblersLayer(String name, Boolean kotlin) {
         super(
                 CaeSettingsReader.SINGLETON.getAssemblersUseCasePath(),
                 name,
                 Layers.ASSEMBLERS,
-                UseCaseTypes.IRRELEVANT
+                UseCaseTypes.IRRELEVANT,
+                kotlin
         );
     }
 }

@@ -7,12 +7,13 @@ import com.cae.meta_structure.core.entities.implementations.structures.use_case_
 
 public class SucAtCoreLayer extends BasicUseCaseStructure {
 
-    public SucAtCoreLayer(String name) {
+    public SucAtCoreLayer(String useCaseName, Boolean kotlin) {
         super(
                 CaeSettingsReader.SINGLETON.getCoreUseCasesPath(),
-                name,
+                useCaseName,
                 Layers.CORE,
-                UseCaseTypes.SUC
+                UseCaseTypes.SUC,
+                kotlin
         );
     }
 }

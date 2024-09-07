@@ -5,13 +5,13 @@ import com.cae.meta_structure.core.entities.FolderMetaStructure;
 import com.cae.meta_structure.core.entities.enums.TextCase;
 import com.cae.meta_structure.core.entities.providers.JavaWorldInfoProvider;
 
-public class CucImplementationFileMetaStructure extends FileMetaStructure {
-    public CucImplementationFileMetaStructure(FolderMetaStructure implementationsFolderMetaStructure, String name) {
+public class KotlinCucImplementationFileMetaStructure extends FileMetaStructure {
+    public KotlinCucImplementationFileMetaStructure(FolderMetaStructure implementationsFolderMetaStructure, String name) {
         super(
                 implementationsFolderMetaStructure,
                 name.concat("UseCaseImplementation"),
                 TextCase.PASCAL,
-                "java"
+                "kt"
         );
         this.registerPlaceholder("UseCaseName", this.getName().replace("UseCaseImplementation", ""));
         this.registerPlaceholder("GroupId", JavaWorldInfoProvider.SINGLETON.getGroupId());

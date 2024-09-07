@@ -24,9 +24,9 @@ public class GenerateRucUseCaseImplementation extends GenerateRucUseCase {
     @Override
     protected void applyInternalLogic(GenerateRucUseCaseInput input, UseCaseExecutionCorrelation correlation) {
         var fucStructure = List.of(
-            new RucAtCoreLayer(input.getName()),
-            new RucAtAdaptersLayer(input.getName()),
-            new RucAtAssemblersLayer(input.getName())
+            new RucAtCoreLayer(input.getName(), input.getKotlin()),
+            new RucAtAdaptersLayer(input.getName(), input.getKotlin()),
+            new RucAtAssemblersLayer(input.getName(), input.getKotlin())
         );
         fucStructure.forEach(FolderMetaStructure::create);
     }

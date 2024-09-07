@@ -23,7 +23,7 @@ public class MonolayerAdaptersLoggerFolderMetaStructure extends FolderMetaStruct
     @Override
     protected List<FileMetaStructure> defineNeededFiles() {
         return List.of(
-                new MonolayerLoggerAdapterFileMetaStructure(this)
+                new JavaLoggerAdapterFileMetaStructure(this)
         );
     }
 }

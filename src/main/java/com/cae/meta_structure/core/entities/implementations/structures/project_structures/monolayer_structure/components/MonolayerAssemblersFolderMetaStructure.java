@@ -20,7 +20,7 @@ public class MonolayerAssemblersFolderMetaStructure extends FolderMetaStructure 
     protected List<FolderMetaStructure> defineNeededFolders() {
         return List.of(
                 new MonolayerUseCasesFolderMetaStructure(this),
-                new MonolayerAssemblersLoggerFolderMetaStructure(this)
+                new MonolayerAssemblersLoggerFolderMetaStructure(this, false)
         );
     }
 

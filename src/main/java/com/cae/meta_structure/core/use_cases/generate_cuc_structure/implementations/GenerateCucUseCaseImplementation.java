@@ -24,9 +24,9 @@ public class GenerateCucUseCaseImplementation extends GenerateCucUseCase {
     @Override
     protected void applyInternalLogic(GenerateCucUseCaseInput input, UseCaseExecutionCorrelation correlation) {
         var fucStructure = List.of(
-            new CucAtCoreLayer(input.getName()),
-            new CucAtAdaptersLayer(input.getName()),
-            new CucAtAssemblersLayer(input.getName())
+            new CucAtCoreLayer(input.getName(), input.getKotlin()),
+            new CucAtAdaptersLayer(input.getName(), input.getKotlin()),
+            new CucAtAssemblersLayer(input.getName(), input.getKotlin())
         );
         fucStructure.forEach(FolderMetaStructure::create);
     }

@@ -5,12 +5,12 @@ import com.cae.meta_structure.core.entities.FolderMetaStructure;
 import com.cae.meta_structure.core.entities.enums.TextCase;
 import com.cae.meta_structure.core.entities.providers.JavaWorldInfoProvider;
 
-public class MonolayerLoggerAdapterFileMetaStructure extends FileMetaStructure {
+public class JavaLoggerBootstrapFileMetaStructure extends FileMetaStructure {
 
-    public MonolayerLoggerAdapterFileMetaStructure(FolderMetaStructure parent) {
+    public JavaLoggerBootstrapFileMetaStructure(FolderMetaStructure parent) {
         super(
                 parent,
-                "LoggerAdapter",
+                "LoggerBootstrap",
                 TextCase.PASCAL,
                 "java"
         );

@@ -33,7 +33,7 @@ public class MultilayerNameFolderMetaStructure extends FolderMetaStructure {
                 );
             case "assemblers":
                 return List.of(
-                        new MultilayerAssemblersLoggerFolderMetaStructure(this),
+                        new MultilayerAssemblersLoggerFolderMetaStructure(this, false),
                         new MultilayerUseCasesFolderMetaStructure(this)
                 );
             default:

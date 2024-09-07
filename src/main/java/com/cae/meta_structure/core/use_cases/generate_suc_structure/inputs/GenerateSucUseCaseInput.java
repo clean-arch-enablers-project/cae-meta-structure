@@ -17,4 +17,7 @@ public class GenerateSucUseCaseInput extends UseCaseInput {
     @NotNullInputField
     private final String name;
 
+    @NotNullInputField
+    private final Boolean kotlin;
+
 }

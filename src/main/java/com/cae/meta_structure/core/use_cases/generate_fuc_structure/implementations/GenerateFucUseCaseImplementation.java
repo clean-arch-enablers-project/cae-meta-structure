@@ -24,9 +24,9 @@ public class GenerateFucUseCaseImplementation extends GenerateFucUseCase {
     @Override
     protected void applyInternalLogic(GenerateFucUseCaseInput input, UseCaseExecutionCorrelation correlation) {
         var fucStructure = List.of(
-            new FucAtCoreLayer(input.getName()),
-            new FucAtAdaptersLayer(input.getName()),
-            new FucAtAssemblersLayer(input.getName())
+            new FucAtCoreLayer(input.getName(), input.getKotlin()),
+            new FucAtAdaptersLayer(input.getName(), input.getKotlin()),
+            new FucAtAssemblersLayer(input.getName(), input.getKotlin())
         );
         fucStructure.forEach(FolderMetaStructure::create);
     }

@@ -5,8 +5,8 @@ import com.cae.meta_structure.core.entities.enums.TextCase;
 import com.cae.meta_structure.core.entities.implementations.structures.use_case_structures.components.ImplementationsFolderMetaStructure;
 import com.cae.meta_structure.core.entities.providers.JavaWorldInfoProvider;
 
-public class RucImplementationFileMetaStructure extends FileMetaStructure {
-    public RucImplementationFileMetaStructure(ImplementationsFolderMetaStructure implementationsFolderMetaStructure, String name) {
+public class KotlinRucImplementationFileMetaStructure extends FileMetaStructure {
+    public KotlinRucImplementationFileMetaStructure(ImplementationsFolderMetaStructure implementationsFolderMetaStructure, String name) {
         super(
                 implementationsFolderMetaStructure,
                 name.concat("UseCaseImplementation"),

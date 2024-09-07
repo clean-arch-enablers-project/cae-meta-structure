@@ -1,13 +1,13 @@
-package com.cae.meta_structure.core.entities.implementations.structures.project_structures.monolayer_structure.components;
+package com.cae.meta_structure.core.entities.implementations.structures.project_structures.multilayer_structure.components;
 
 import com.cae.meta_structure.core.entities.FileMetaStructure;
 import com.cae.meta_structure.core.entities.FolderMetaStructure;
 import com.cae.meta_structure.core.entities.enums.TextCase;
 import com.cae.meta_structure.core.entities.providers.JavaWorldInfoProvider;
 
-public class MonolayerCaeSettingsFileMetaStructure extends FileMetaStructure {
+public class JavaMultilayerCaeSettingsFileMetaStructure extends FileMetaStructure {
 
-    public MonolayerCaeSettingsFileMetaStructure(FolderMetaStructure parent) {
+    public JavaMultilayerCaeSettingsFileMetaStructure(FolderMetaStructure parent) {
         super(
                 parent,
                 "cae-settings",

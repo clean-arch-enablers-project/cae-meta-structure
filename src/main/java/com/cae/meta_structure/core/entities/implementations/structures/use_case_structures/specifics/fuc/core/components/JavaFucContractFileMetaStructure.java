@@ -5,9 +5,9 @@ import com.cae.meta_structure.core.entities.FolderMetaStructure;
 import com.cae.meta_structure.core.entities.enums.TextCase;
 import com.cae.meta_structure.core.entities.providers.JavaWorldInfoProvider;
 
-public class FucContractFileMetaStructure extends FileMetaStructure {
+public class JavaFucContractFileMetaStructure extends FileMetaStructure {
 
-    public FucContractFileMetaStructure(FolderMetaStructure parent) {
+    public JavaFucContractFileMetaStructure(FolderMetaStructure parent) {
         super(
                 parent,
                 parent.getName().concat("UseCase"),

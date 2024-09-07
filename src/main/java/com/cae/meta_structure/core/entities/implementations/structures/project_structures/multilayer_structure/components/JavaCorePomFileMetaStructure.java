@@ -5,16 +5,17 @@ import com.cae.meta_structure.core.entities.FolderMetaStructure;
 import com.cae.meta_structure.core.entities.enums.TextCase;
 import com.cae.meta_structure.core.entities.providers.JavaWorldInfoProvider;
 
-public class MultilayerLoggerAdapterFileMetaStructure extends FileMetaStructure {
+public class JavaCorePomFileMetaStructure extends FileMetaStructure {
 
-    public MultilayerLoggerAdapterFileMetaStructure(FolderMetaStructure parent) {
-        super(parent,
-                "LoggerAdapter",
-                TextCase.PASCAL,
-                "java"
+    public JavaCorePomFileMetaStructure(FolderMetaStructure parent) {
+        super(
+                parent,
+                "pom",
+                TextCase.KEBAB,
+                "xml"
         );
         this.registerPlaceholder("groupId", JavaWorldInfoProvider.SINGLETON.getGroupId());
         this.registerPlaceholder("artifactId", JavaWorldInfoProvider.SINGLETON.getArtifactId());
+        this.registerPlaceholder("cae-framework-version", JavaWorldInfoProvider.SINGLETON.getCaeFrameworkVersion());
     }
-
 }

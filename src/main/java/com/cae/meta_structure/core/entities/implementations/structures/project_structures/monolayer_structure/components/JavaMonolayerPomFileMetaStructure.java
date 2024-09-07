@@ -5,13 +5,13 @@ import com.cae.meta_structure.core.entities.FolderMetaStructure;
 import com.cae.meta_structure.core.entities.enums.TextCase;
 import com.cae.meta_structure.core.entities.providers.JavaWorldInfoProvider;
 
-public class MonolayerPomFileMetaStructure extends FileMetaStructure {
+public class JavaMonolayerPomFileMetaStructure extends FileMetaStructure {
 
     private static final String DEPENDENCY_TAG_OPENING = "        <dependency>\n";
     private static final String DEPENDENCY_TAG_CLOSURE = "        </dependency>\n";
     private static final String TEST_SCOPE = "";
 
-    public MonolayerPomFileMetaStructure(FolderMetaStructure parent, String dependencies) {
+    public JavaMonolayerPomFileMetaStructure(FolderMetaStructure parent, String dependencies) {
         super(
                 parent,
                 "pom",

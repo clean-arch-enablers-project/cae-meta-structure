@@ -22,6 +22,6 @@ public class MultilayerAssemblersProject extends FolderMetaStructure {
 
     @Override
     protected List<FileMetaStructure> defineNeededFiles() {
-        return List.of(new AssemblersPomFileMetaStructure(this));
+        return List.of(new JavaAssemblersPomFileMetaStructure(this));
     }
 }

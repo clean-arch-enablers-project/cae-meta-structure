@@ -22,6 +22,6 @@ public class MultilayerCoreProject extends FolderMetaStructure {
 
     @Override
     protected List<FileMetaStructure> defineNeededFiles() {
-        return List.of(new CorePomFileMetaStructure(this));
+        return List.of(new JavaCorePomFileMetaStructure(this));
     }
 }

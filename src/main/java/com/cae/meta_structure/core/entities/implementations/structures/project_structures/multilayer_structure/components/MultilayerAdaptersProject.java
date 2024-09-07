@@ -22,6 +22,6 @@ public class MultilayerAdaptersProject extends FolderMetaStructure {
 
     @Override
     protected List<FileMetaStructure> defineNeededFiles() {
-        return List.of(new AdaptersPomFileMetaStructure(this));
+        return List.of(new JavaAdaptersPomFileMetaStructure(this));
     }
 }

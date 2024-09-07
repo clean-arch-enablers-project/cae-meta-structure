@@ -5,8 +5,8 @@ import com.cae.meta_structure.core.entities.FolderMetaStructure;
 import com.cae.meta_structure.core.entities.enums.TextCase;
 import com.cae.meta_structure.core.entities.providers.JavaWorldInfoProvider;
 
-public class AssemblerFileMetaStructure extends FileMetaStructure {
-    public AssemblerFileMetaStructure(FolderMetaStructure parent) {
+public class JavaAssemblerFileMetaStructure extends FileMetaStructure {
+    public JavaAssemblerFileMetaStructure(FolderMetaStructure parent) {
         super(
             parent,
             parent.getName().concat("UseCaseAssembler"),

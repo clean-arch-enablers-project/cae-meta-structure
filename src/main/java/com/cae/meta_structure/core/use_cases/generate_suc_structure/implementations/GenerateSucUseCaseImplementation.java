@@ -24,9 +24,9 @@ public class GenerateSucUseCaseImplementation extends GenerateSucUseCase {
     @Override
     protected void applyInternalLogic(GenerateSucUseCaseInput input, UseCaseExecutionCorrelation correlation) {
         var fucStructure = List.of(
-            new SucAtCoreLayer(input.getName()),
-            new SucAtAdaptersLayer(input.getName()),
-            new SucAtAssemblersLayer(input.getName())
+            new SucAtCoreLayer(input.getName(), input.getKotlin()),
+            new SucAtAdaptersLayer(input.getName(), input.getKotlin()),
+            new SucAtAssemblersLayer(input.getName(), input.getKotlin())
         );
         fucStructure.forEach(FolderMetaStructure::create);
     }

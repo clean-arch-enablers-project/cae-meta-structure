@@ -5,15 +5,15 @@ import com.cae.meta_structure.core.entities.FolderMetaStructure;
 import com.cae.meta_structure.core.entities.enums.TextCase;
 import com.cae.meta_structure.core.entities.providers.JavaWorldInfoProvider;
 
-public class SucImplementationFileMetaStructure extends FileMetaStructure {
-    public SucImplementationFileMetaStructure(FolderMetaStructure implementationsFolderMetaStructure, String name) {
+public class JavaSucContractFileMetaStructure extends FileMetaStructure {
+    public JavaSucContractFileMetaStructure(FolderMetaStructure parent) {
         super(
-                implementationsFolderMetaStructure,
-                name.concat("UseCaseImplementation"),
+                parent,
+                parent.getName().concat("UseCase"),
                 TextCase.PASCAL,
                 "java"
         );
-        this.registerPlaceholder("UseCaseName", this.getName().replace("UseCaseImplementation", ""));
+        this.registerPlaceholder("UseCaseName", this.getName().replace("UseCase", ""));
         this.registerPlaceholder("GroupId", JavaWorldInfoProvider.SINGLETON.getGroupId());
         this.registerPlaceholder("ArtifactId", JavaWorldInfoProvider.SINGLETON.getArtifactId());
     }

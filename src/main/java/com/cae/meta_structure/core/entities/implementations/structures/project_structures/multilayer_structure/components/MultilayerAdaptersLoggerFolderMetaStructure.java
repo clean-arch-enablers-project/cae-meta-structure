@@ -3,6 +3,7 @@ package com.cae.meta_structure.core.entities.implementations.structures.project_
 import com.cae.meta_structure.core.entities.FileMetaStructure;
 import com.cae.meta_structure.core.entities.FolderMetaStructure;
 import com.cae.meta_structure.core.entities.enums.TextCase;
+import com.cae.meta_structure.core.entities.implementations.structures.project_structures.monolayer_structure.components.JavaLoggerAdapterFileMetaStructure;
 
 import java.util.List;
 
@@ -21,6 +22,6 @@ public class MultilayerAdaptersLoggerFolderMetaStructure extends FolderMetaStruc
 
     @Override
     protected List<FileMetaStructure> defineNeededFiles() {
-        return List.of(new MultilayerLoggerAdapterFileMetaStructure(this));
+        return List.of(new JavaLoggerAdapterFileMetaStructure(this));
     }
 }

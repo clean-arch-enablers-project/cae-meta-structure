@@ -9,14 +9,16 @@ import java.util.List;
 public class InputsFolderMetaStructure extends FolderMetaStructure {
 
     private final String useCaseName;
+    private final boolean kotlin;
 
-    public InputsFolderMetaStructure(FolderMetaStructure ioFolderMetaStructure, String useCaseName) {
+    public InputsFolderMetaStructure(FolderMetaStructure ioFolderMetaStructure, String useCaseName, boolean kotlin) {
         super(
                 ioFolderMetaStructure,
                 "inputs",
                 TextCase.SNAKE
         );
         this.useCaseName = useCaseName;
+        this.kotlin = kotlin;
     }
 
     @Override
@@ -26,6 +28,9 @@ public class InputsFolderMetaStructure extends FolderMetaStructure {
 
     @Override
     protected List<FileMetaStructure> defineNeededFiles() {
-        return List.of(new InputFileMetaStructure(this, this.useCaseName));
+        return List.of(this.kotlin?
+                new KotlinInputFileMetaStructure(this, this.useCaseName) :
+                new JavaInputFileMetaStructure(this, this.useCaseName)
+        );
     }
 }
