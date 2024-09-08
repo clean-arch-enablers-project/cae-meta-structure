@@ -11,7 +11,7 @@ public class KotlinRucImplementationFileMetaStructure extends FileMetaStructure 
                 implementationsFolderMetaStructure,
                 name.concat("UseCaseImplementation"),
                 TextCase.PASCAL,
-                "java"
+                "kt"
         );
         this.registerPlaceholder("UseCaseName", this.getName().replace("UseCaseImplementation", ""));
         this.registerPlaceholder("GroupId", JavaWorldInfoProvider.SINGLETON.getGroupId());
